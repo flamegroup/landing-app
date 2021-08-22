@@ -43,6 +43,7 @@ const useStyles = makeStyles({
   },
   submitBtn: {
     width: '20%',
+    color: 'white',
     margin: '20px auto 10px',
     backgroundColor: '#ff6100',
     padding: '20px',
@@ -419,7 +420,7 @@ export default function Form() {
               </Grid>
             )}
             {values.game === 'csgo' && (
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={8} justifyContent='center'>
                 <TextField
                   name='steamid'
                   required
