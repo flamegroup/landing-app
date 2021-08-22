@@ -419,7 +419,7 @@ export default function Form() {
               </Grid>
             )}
             {values.game === 'csgo' && (
-              <Grid item xs={8} md={8}>
+              <Grid item xs={12} md={8}>
                 <TextField
                   name='steamid'
                   required
