@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   form: {
     width: '100vw',
     maxWidth: '100vw',
-    margin: '10px',
+    margin: '20px',
   },
   image: {
     width: '100%',
@@ -42,11 +42,12 @@ const useStyles = makeStyles({
     maxHeight: '505.5px',
   },
   submitBtn: {
-    width: '20%',
+    width: '100%',
     color: 'white',
     margin: '20px auto 10px',
     backgroundColor: '#ff6100',
     padding: '20px',
+    fontSize: '20px',
     '&:hover': {
       backgroundColor: '#da1902',
     },
@@ -70,11 +71,21 @@ const useStyles = makeStyles({
   uploadBtn: {
     paddingBlock: '15px',
     backgroundColor: '#ff4306',
+    width: '100%',
+    marginTop: '10px',
   },
   uploadBtnImage: {
     height: '20px',
     width: '20px',
     marginRight: '10px',
+  },
+  textArea: {
+    '& .MuiInputLabel-outlined': {
+      maxWidth: '96% !important',
+    },
+    '& .MuiOutlinedInput-multiline': {
+      paddingBlock: '29px',
+    },
   },
 });
 
@@ -98,7 +109,12 @@ export default function Form() {
   const [files, setFiles] = useState<FileList>();
   const ref = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    formIsValidForSend();
+    debugger;
+    if (files !== undefined) {
+      formIsValidForSend(files?.length > 0);
+    } else {
+      formIsValidForSend(false);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values]);
 
@@ -129,6 +145,7 @@ export default function Form() {
     const { files } = event.target;
     if (files !== null) {
       setFiles(files);
+      formIsValidForSend(true);
     }
   };
 
@@ -177,12 +194,15 @@ export default function Form() {
       });
   };
 
-  const formIsValidForSend = () => {
+  const formIsValidForSend = (filess: boolean) => {
+    debugger;
     const valid =
       values.game !== '' &&
       values.name !== '' &&
       values.lastName !== '' &&
       values.email !== '' &&
+      errors.email === '' &&
+      filess &&
       values.question !== '' &&
       values.discord !== '';
     setValid(!valid);
@@ -348,7 +368,9 @@ export default function Form() {
                 variant='outlined'
                 id='text'
                 multiline
-                maxRows={2}
+                minRows={2}
+                maxRows={3}
+                className={classes.textArea}
                 label='Por que te gustaría ser parte de un equipo de e-sports y cuales son tus expectativas?'
                 value={values.question}
                 onBlur={handleChange}
@@ -358,27 +380,6 @@ export default function Form() {
                   error: true,
                 })}
               />
-            </Grid>
-
-            <Grid item xs={4} md={4}>
-              <input
-                accept='image/*'
-                id='contained-button-file'
-                className={classes.input}
-                multiple
-                ref={ref}
-                onChange={handleUpload}
-                type='file'
-              />
-              <Button
-                className={classes.uploadBtn}
-                onClick={() => {
-                  ref.current?.click();
-                }}>
-                <CameraIcon className={classes.uploadBtnImage} />
-                Compartenos tus logros
-              </Button>
-              {files?.length ? <p>{files.length} Archivos cargado</p> : ''}
             </Grid>
 
             {values.game === 'lol' && (
@@ -439,7 +440,30 @@ export default function Form() {
               </Grid>
             )}
           </Grid>
-          <Grid item xs={12} container justifyContent='center'>
+
+          <Grid item xs={12} md={4} justifyContent='center'>
+            <input
+              accept='image/*'
+              id='contained-button-file'
+              className={classes.input}
+              multiple
+              ref={ref}
+              onChange={handleUpload}
+              type='file'
+              required
+            />
+            <Button
+              className={classes.uploadBtn}
+              onClick={() => {
+                ref.current?.click();
+              }}>
+              <CameraIcon className={classes.uploadBtnImage} />
+              Compartenos tus logros *
+            </Button>
+            {files?.length ? <p>{files.length} Archivos cargado</p> : ''}
+          </Grid>
+
+          <Grid item xs={12} md={8} container justifyContent='center'>
             <Button
               className={classes.submitBtn}
               variant='contained'
