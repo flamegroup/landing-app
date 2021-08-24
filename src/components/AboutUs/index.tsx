@@ -50,7 +50,7 @@ export default function AboutUs() {
           Esta es la web donde podran inscribirse las personas que deseen
           convertir su pasion en su estilo de vida, además de hacer parte de
           esta gran familia, flame abre sus puertas para aquellos que se crean
-          capaces de lograr llevar este club, a otro nivel y ser parte de la
+          capaces de lograr llevar este club a otro nivel y ser parte de la
           historia de los esports. No esperes mas y registrate!. 
         </h3>
 
