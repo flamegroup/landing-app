@@ -42,7 +42,7 @@ export default function AboutUs() {
   return (
     <Grid item container xs={12} justifyContent='center'>
       <div className={classes.root}>
-        <h2> Etiam elit lacus, vestibulum eu lacinia ut</h2>
+        <h2> BIENVENIDO A LA FAMILIA FLAME</h2>
 
         <div className={classes.divider}></div>
 
