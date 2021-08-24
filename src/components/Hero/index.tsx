@@ -49,8 +49,8 @@ export default function Hero() {
   return (
     <Grid item container xs={12}>
       <Grid item xs={12} className={classes.hero}>
-        <h2>Aliquam erat volu tpat</h2>
-        <p>Ut est quam, feugiat eget tristique sed, tincidunt non enim</p>
+        <h2>FLAME ESPORTS CLUB</h2>
+        <p>Formulario de inscripciones, comienza la nueva era!</p>
         <Grid item xs={12} className={classes.videoContainer}>
           <video
             className={classes.videoHero}
