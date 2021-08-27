@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     width: '100vw',
     maxWidth: '100vw',
     margin: '20px',
-    background-url: 'https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/BG-WOW.jpg?alt=media&token=0e8c0353-9a6a-4c3c-b72e-d01fc7d81656'
+    
   },
   image: {
     width: '100%',
