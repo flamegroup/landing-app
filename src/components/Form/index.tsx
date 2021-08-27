@@ -235,7 +235,7 @@ export default function Form() {
           {values.game === 'wow' && (
             <img
               className={classes.image}
-              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/World-of-warcraft-gratis-esta-semana-1024x1024.jpg?alt=media&token=120622f6-a1ec-497e-a18f-d071ba433ed9'
+              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/Centro-WOW.png?alt=media&token=8ca6b70f-ea44-4e8a-8109-457a08b1b41a'
               alt='World of Wardcaraft'
             />
           )}
