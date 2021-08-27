@@ -242,7 +242,7 @@ export default function Form() {
           {values.game === 'csgo' && (
             <img
               className={classes.image}
-              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/counter-strike-global-offensive-caratula.jpg?alt=media&token=422860b4-66a5-4381-bef4-7e6ddee2b8d5'
+              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/Centro-CSGO.png?alt=media&token=8d20cf18-b68f-4b0e-b97d-887a19335421'
               alt='Counter Strike'
             />
           )}
