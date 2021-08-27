@@ -256,7 +256,7 @@ export default function Form() {
           {values.game === 'cod' && (
             <img
               className={classes.image}
-              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/unnamed.png?alt=media&token=96f195fc-a23a-4158-9593-05ada93a1169'
+              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/Centro-COD.png?alt=media&token=152d193c-7db7-4db0-9f8c-e406e0b03c3a'
               alt='Call of duty'
             />
           )}
