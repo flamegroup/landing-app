@@ -228,7 +228,7 @@ export default function Form() {
           {values.game === 'lol' && (
             <img
               className={classes.image}
-              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/87a1ef48e43b8cf114017e3ad51b801951b20fcf.jpg?alt=media&token=960c1996-a1db-474d-b098-5c701f3a7598'
+              src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/Centro-LOL.png?alt=media&token=5ce5385e-246e-4080-8874-a813bd97bd8e'
               alt='league of legends'
             />
           )}
