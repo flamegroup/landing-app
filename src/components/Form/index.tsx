@@ -237,7 +237,7 @@ export default function Form() {
             <img
               className={classes.image}
               src='https://firebasestorage.googleapis.com/v0/b/flame-group-page.appspot.com/o/Centro-WOW.png?alt=media&token=8ca6b70f-ea44-4e8a-8109-457a08b1b41a'
-              alt='World of Wardcaraft'
+              alt='World of Warcraft'
             />
           )}
           {values.game === 'csgo' && (
@@ -284,7 +284,7 @@ export default function Form() {
                   <MenuItem value='' disabled></MenuItem>
                   <MenuItem value='lol'>League of legends</MenuItem>
                   <MenuItem value='csgo'>Counter Strike: GO</MenuItem>
-                  <MenuItem value='wow'>World of Wardcraft</MenuItem>
+                  <MenuItem value='wow'>World of Warcraft</MenuItem>
                   <MenuItem value='cod'>Call of duty</MenuItem>
                   <MenuItem value='twitch'>Creador de contenido</MenuItem>
                 </Select>
